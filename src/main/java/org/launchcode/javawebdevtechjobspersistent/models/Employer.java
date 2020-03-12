@@ -14,13 +14,13 @@ public class Employer extends AbstractEntity {
     @NotNull
     private String location;
 
-    public Employer(String location){
+    public Employer(String location) {
         this.location = location;
-//
-//        @OneToMany(mappedBy = Job)
-//        @JoinColumn
-//        private List<Job> jobs = new ArrayList<>();
     }
+
+        @OneToMany
+        @JoinColumn
+        private List<Job> jobs = new ArrayList<>();
 
     public Employer (){
 
